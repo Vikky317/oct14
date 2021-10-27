@@ -30,5 +30,11 @@ pipeline {
                 echo 'hi to all'
             }
          }
+       post {
+  success {
+    // One or more steps need to be included within each condition's block.
+      mail bcc: '', body: 'Test mail for pipeline', cc: '', from: '', replyTo: '', subject: 'Test mail', to: 'vikram.klsn@gmail.com'
+  }
+}
     }
 }
